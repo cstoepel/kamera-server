@@ -1,0 +1,42 @@
+kamera-server COMMANDS (kamsvr version 1.10)
+
+__Command______________________Reply:____________________________________________________
+                               ERROR <n> <command>
+                                 0    command unknown
+                                 1    parameter count
+                                 2    parameter out of range
+                                 3    command not executed
+VERSION                        VERSION <version>
+QUIT                           QUIT OK
+PING                           PONG
+STATUS                         STATUS <status list>
+STATUSX                        STATUSX ...             Human readable
+MD-ON                          MD-ON  OK               motion detection on/off
+MD-OFF                         MD-OFF OK
+MD-PHOTO-ON                    MD-PHOTO-ON  OK         take photos on/off
+MD-PHOTO-OFF                   MD-PHOTO-OFF OK
+REC-START                      REC-START OK
+REC-STOP                       REC-STOP  OK
+MC-START                       MC-START <ip>:<port>
+MC-STOP                        MC-STOP OK
+MC-ADDR                        MC-ADDR <ip>:<port>
+VS-COUNT                       VS-COUNT <number>       Number of Video-Streams
+VS-LIST                        VS-LIST  <ip>:<port>,...
+VS-START <addr>:<port>         VS-START OK
+VS-STOP  <addr>:<port>         VS-STOP  OK
+CONFIG-LOAD                    CONFIG-LOAD OK
+CONFIG-SET  <name>             CONFIG-SET  OK
+DEBUG-ON                       DEBUG-ON  OK
+DEBUG-OFF                      DEBUG-OFF OK
+SWITCH <n> <0|1>               SWITCH OK
+SWITCH-STATE                   SWITCH-STATE <xxxxxxxxxxxxxxxx>
+SWITCH-SET <xxxxxxxxxxxxxxxx>  SWITCH-SET   <xxxxxxxxxxxxxxxx>
+PHOTO                          PHOTO  <file-name>                  take photo
+PHOTOX                         PHOTOX <file-name> <b64enc-photo>   take photo and send it
+PHOTOX-LAST                    PHOTOX-LAST <b64enc-photo>          send last timer photo
+TURN-RIGHT <steps>             TURN-RIGHT OK
+TURN-LEFT  <steps>             TURN-LEFT  OK
+AUX1 n 0|1                     AUX1 0 0      ESP4 ein
+                               AUX1 0 1      ESP4 aus
+                               AUX1 1 0      Relaysteuerung ein
+                               AUX1 1 1      Relaysteuerung aus
